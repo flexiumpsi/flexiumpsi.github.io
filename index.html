@@ -19,7 +19,7 @@
       --bg2:     #162436;
       --bg3:     #1C2F42;
       --white:   #F0EDE8;
-      --dim:     #8A9BAD;
+      --dim:     #B0BFCC;
       --sage:    #7A9178;
       --terra:   #B06040;
       --blue:    #4A90B8;
@@ -29,6 +29,7 @@
       --max:     1100px;
     }
     html { scroll-behavior: smooth; }
+    section[id] { scroll-margin-top: 80px; }
     body {
       background: var(--bg);
       color: var(--white);
@@ -64,6 +65,7 @@
       max-width: var(--max); margin: 0 auto; padding: 0 32px;
       display: flex; align-items: center; justify-content: space-between;
     }
+    @media (max-width: 400px) { nav .inner { padding: 0 16px; } }
     nav .nav-links {
       display: flex; align-items: center; gap: 36px;
       list-style: none;
@@ -94,7 +96,7 @@
     #hero {
       min-height: 100vh;
       display: flex; align-items: center;
-      padding: 120px 0 80px;
+      padding: 180px 0 80px;
       position: relative; overflow: hidden;
     }
     #hero .hero-inner {
@@ -243,7 +245,7 @@
       padding-left: 28px;
     }
     .que-es-left .body-text {
-      font-size: 16px; color: var(--dim); line-height: 1.8; margin-bottom: 20px;
+      font-size: 16px; color: rgba(240,237,232,0.82); line-height: 1.8; margin-bottom: 20px;
     }
     .encuadre-box {
       background: var(--bg2);
@@ -257,7 +259,7 @@
       font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
       color: var(--sage); margin-bottom: 10px; font-weight: 500;
     }
-    .encuadre-box p { font-size: 15px; color: var(--dim); line-height: 1.7; }
+    .encuadre-box p { font-size: 15px; color: rgba(240,237,232,0.80); line-height: 1.7; }
 
     /* Comparison table */
     .comparison {
@@ -324,7 +326,7 @@
     .proceso-card.c-sage  .proceso-sub { color: var(--sage); }
     .proceso-card.c-terra .proceso-sub { color: var(--terra); }
     .proceso-card.c-blue  .proceso-sub { color: var(--blue); }
-    .proceso-desc { font-size: 14px; color: var(--dim); line-height: 1.7; }
+    .proceso-desc { font-size: 14px; color: rgba(240,237,232,0.78); line-height: 1.7; }
 
     /* ── TALLER ───────────────────────────────────────────────────── */
     #taller { background: var(--bg); }
@@ -392,15 +394,8 @@
     .mi-blue  { background: rgba(74,144,184,0.12);  color: var(--blue);  border: 1px solid rgba(74,144,184,0.3); }
     .miembro-name { font-family: var(--serif); font-size: 22px; font-weight: 700; margin-bottom: 4px; }
     .miembro-role { font-size: 13px; color: var(--dim); margin-bottom: 20px; }
-    .miembro-desc { font-size: 14px; color: var(--dim); line-height: 1.75; margin-bottom: 20px; }
-    .miembro-tags { display: flex; flex-wrap: wrap; gap: 8px; }
-    .tag {
-      font-size: 12px; padding: 5px 12px; border-radius: 20px;
-      border: 1px solid; font-weight: 400;
-    }
-    .tag-sage  { color: var(--sage);  border-color: rgba(122,145,120,0.35); background: rgba(122,145,120,0.08); }
-    .tag-terra { color: var(--terra); border-color: rgba(176,96,64,0.35);   background: rgba(176,96,64,0.08); }
-    .tag-blue  { color: var(--blue);  border-color: rgba(74,144,184,0.35);  background: rgba(74,144,184,0.08); }
+    .miembro-desc { font-size: 14px; color: rgba(240,237,232,0.78); line-height: 1.75; margin-bottom: 0; }
+
 
     /* ── FAQ ──────────────────────────────────────────────────────── */
     #faq { background: var(--bg); }
@@ -417,7 +412,7 @@
       margin-bottom: 12px; line-height: 1.4;
       color: var(--white);
     }
-    .faq-a { font-size: 15px; color: var(--dim); line-height: 1.75; }
+    .faq-a { font-size: 15px; color: rgba(240,237,232,0.78); line-height: 1.75; }
 
     /* ── INSCRIPCIÓN ──────────────────────────────────────────────── */
     #inscripcion {
@@ -518,14 +513,8 @@
   <!-- ── NAV ──────────────────────────────────────────────────────── -->
   <nav id="navbar">
     <div class="inner">
-      <a href="#" aria-label="Inicio">
-        <svg class="logo-svg" width="140" height="44" viewBox="0 0 140 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M 8 26 C 22 10, 48 4, 72 12 C 88 18, 98 26, 114 22" stroke="#F0EDE8" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-          <path d="M 8 32 C 24 16, 52 10, 78 18 C 94 24, 106 32, 124 27" stroke="#7A9178" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-          <circle cx="124" cy="27" r="4" fill="#B06040"/>
-          <text x="8" y="44" font-family="Georgia, serif" font-size="18" font-weight="bold" fill="#F0EDE8">Flex</text>
-          <text x="43" y="44" font-family="Georgia, serif" font-size="18" font-style="italic" fill="#7A9178">ium</text>
-        </svg>
+      <a href="#" aria-label="Inicio" style="text-decoration:none;">
+        <span style="font-family:Georgia,serif;font-size:22px;font-weight:700;color:#F0EDE8;letter-spacing:-0.5px;">Flex</span><span style="font-family:Georgia,serif;font-size:22px;font-style:italic;color:#7A9178;">ium</span>
       </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#que-es">¿Qué es?</a></li>
@@ -784,33 +773,18 @@
           <div class="miembro-name">Victoria Ureta</div>
           <div class="miembro-role">Estudiante avanzada de Psicología · UP — Abogada · UB</div>
           <p class="miembro-desc">Sus intereses se centran en las psicoterapias basadas en evidencia, especialmente la terapia cognitivo-conductual y la psicoterapia basada en procesos.</p>
-          <div class="miembro-tags">
-            <span class="tag tag-blue">TCC</span>
-            <span class="tag tag-sage">PBT</span>
-            <span class="tag tag-terra">Evidencia</span>
-          </div>
         </div>
         <div class="miembro-card fade-up" style="transition-delay:0.08s;">
           <div class="miembro-initial mi-terra">F</div>
           <div class="miembro-name">Fernando Belossi</div>
           <div class="miembro-role">Estudiante avanzado de Psicología · UP</div>
           <p class="miembro-desc">Especialización en psicología del deporte (en curso). Formado en TCC Integrativa (Fund. Aiglé), Terapia Basada en Procesos y Mindfulness.</p>
-          <div class="miembro-tags">
-            <span class="tag tag-terra">TCC Integrativa</span>
-            <span class="tag tag-blue">PBT</span>
-            <span class="tag tag-sage">Deporte</span>
-          </div>
         </div>
         <div class="miembro-card fade-up" style="transition-delay:0.16s;">
           <div class="miembro-initial mi-blue">B</div>
           <div class="miembro-name">Benjamín Tugender</div>
           <div class="miembro-role">Estudiante avanzado de Psicología y Cs. del Comportamiento · UP — Diplomatura TCC y PBT · UBA</div>
           <p class="miembro-desc">Sus intereses radican en el conductismo radical, el análisis funcional de la conducta y las terapias de tercera generación, con énfasis en ACT.</p>
-          <div class="miembro-tags">
-            <span class="tag tag-blue">ACT</span>
-            <span class="tag tag-sage">Análisis Funcional</span>
-            <span class="tag tag-terra">PBT</span>
-          </div>
         </div>
       </div>
     </div>
@@ -924,7 +898,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Flexium. Programa psicoeducativo — no constituye psicoterapia.</p>
+      <p>© 2026 Flexium.</p>
       <p style="color:var(--dim);">Buenos Aires, Argentina</p>
     </div>
   </footer>
