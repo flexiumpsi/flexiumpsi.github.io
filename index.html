@@ -396,7 +396,6 @@
     .miembro-role { font-size: 13px; color: var(--dim); margin-bottom: 20px; }
     .miembro-desc { font-size: 14px; color: rgba(240,237,232,0.78); line-height: 1.75; margin-bottom: 0; }
 
-
     /* ── FAQ ──────────────────────────────────────────────────────── */
     #faq { background: var(--bg); }
     .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
@@ -513,8 +512,15 @@
   <!-- ── NAV ──────────────────────────────────────────────────────── -->
   <nav id="navbar">
     <div class="inner">
+      <!-- FIX: SVG logo igual al footer, reemplaza los span de texto que no renderizaban -->
       <a href="#" style="text-decoration:none;display:inline-flex;align-items:center;">
-        <span style="font-family:'Libre Baskerville',Georgia,serif;font-size:22px;font-weight:700;color:#F0EDE8;">Flex</span><span style="font-family:'Libre Baskerville',Georgia,serif;font-size:22px;font-style:italic;color:#7A9178;">ium</span>
+        <svg width="110" height="34" viewBox="0 0 140 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 8 26 C 22 10, 48 4, 72 12 C 88 18, 98 26, 114 22" stroke="#F0EDE8" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+          <path d="M 8 32 C 24 16, 52 10, 78 18 C 94 24, 106 32, 124 27" stroke="#7A9178" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <circle cx="124" cy="27" r="4" fill="#B06040"/>
+          <text x="8" y="44" font-family="Georgia, serif" font-size="18" font-weight="bold" fill="#F0EDE8">Flex</text>
+          <text x="43" y="44" font-family="Georgia, serif" font-size="18" font-style="italic" fill="#7A9178">ium</text>
+        </svg>
       </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#que-es">¿Qué es?</a></li>
@@ -917,13 +923,6 @@
     document.querySelectorAll('#navLinks a').forEach(a => {
       a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
     });
-
-    // ── Fix Google Form embed URL ──────────────────────────────────
-    // Replace placeholder with actual form embed URL
-    const iframe = document.querySelector('.form-embed');
-    if (iframe) {
-      iframe.src = 'https://docs.google.com/forms/d/e/1FAIpQLSeoxBl009BW79ynd_orw_SbR_whZrShdkmP1-Pk-0hapbPv4w/viewform?embedded=true';
-    }
 
     // ── Navbar scroll effect ───────────────────────────────────────
     window.addEventListener('scroll', () => {
