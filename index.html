@@ -90,6 +90,8 @@
     nav .nav-cta:hover { background: var(--terra); color: var(--white); }
     .nav-iccf { font-size: 12px; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; color: #4A90B8 !important; border: 0.5px solid rgba(74,144,184,0.3); padding: 5px 10px; border-radius: 4px; transition: background 0.2s !important; }
     .nav-iccf:hover { background: rgba(74,144,184,0.1) !important; color: #7EC8E3 !important; }
+    .nav-app { font-size: 13px !important; font-weight: 500 !important; color: var(--sage) !important; border: 0.5px solid rgba(122,145,120,0.35); padding: 5px 12px; border-radius: 4px; transition: background 0.2s !important; letter-spacing: 0.02em; }
+    .nav-app:hover { background: rgba(122,145,120,0.1) !important; color: var(--white) !important; }
     .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
     .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: all 0.3s; }
 
@@ -130,6 +132,14 @@
       max-width: 520px;
     }
     .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+    .btn-app-hero {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: var(--sage); font-size: 15px; font-weight: 500;
+      border: 0.5px solid rgba(122,145,120,0.35);
+      padding: 13px 24px; border-radius: var(--radius);
+      transition: all 0.2s;
+    }
+    .btn-app-hero:hover { background: rgba(122,145,120,0.1); color: var(--white); }
     .btn-primary {
       background: var(--terra);
       color: var(--white);
@@ -498,6 +508,7 @@
       .que-es-grid, .taller-grid, .inscripcion-inner { grid-template-columns: 1fr; gap: 48px; }
       .procesos-grid, .equipo-grid { grid-template-columns: repeat(2, 1fr); }
       .faq-grid { grid-template-columns: 1fr; }
+      #app .container > div { grid-template-columns: 1fr !important; gap: 40px; }
       nav .nav-links { display: none; }
       nav .nav-links.open {
         display: flex; flex-direction: column;
@@ -550,13 +561,6 @@
   <nav id="navbar">
     <div class="inner">
       <a href="#" aria-label="Inicio">
-        <svg class="logo-svg" width="140" height="44" viewBox="0 0 140 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M 8 26 C 22 10, 48 4, 72 12 C 88 18, 98 26, 114 22" stroke="#F0EDE8" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-          <path d="M 8 32 C 24 16, 52 10, 78 18 C 94 24, 106 32, 124 27" stroke="#7A9178" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-          <circle cx="124" cy="27" r="4" fill="#B06040"/>
-          <text x="8" y="44" font-family="Georgia, serif" font-size="18" font-weight="bold" fill="#F0EDE8">Flex</text>
-          <text x="43" y="44" font-family="Georgia, serif" font-size="18" font-style="italic" fill="#7A9178">ium</text>
-        </svg>
       </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#que-es">¿Qué es?</a></li>
@@ -564,6 +568,7 @@
         <li><a href="#taller">Talleres</a></li>
         <li><a href="#equipo">Equipo</a></li>
         <li><a href="#faq">FAQ</a></li>
+        <li><a href="/app/" class="nav-app">App ↗</a></li>
       </ul>
       <div style="display:flex;align-items:center;gap:16px;">
         <button class="nav-cta" onclick="document.getElementById('inscripcion').scrollIntoView({behavior:'smooth'})">Anotarme</button>
@@ -593,9 +598,9 @@
         </p>
         <div class="hero-actions">
           <a href="#inscripcion" class="btn-primary">Reservar mi lugar</a>
-          <a href="#que-es" class="btn-secondary">
-            ¿Cómo funciona?
-            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          <a href="/app/" class="btn-app-hero">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+            Probá la app gratis
           </a>
         </div>
       </div>
@@ -887,6 +892,65 @@
 
   <div class="divider"></div>
 
+  <!-- ── APP PROMO ──────────────────────────────────────────────────── -->
+  <section id="app" style="padding: 80px 0;">
+    <div class="container">
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;">
+        <div class="fade-up">
+          <div class="section-label">Herramienta gratuita</div>
+          <svg width="160" height="50" viewBox="0 0 140 44" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom:20px; display:block;">
+            <path d="M 8 26 C 22 10, 48 4, 72 12 C 88 18, 98 26, 114 22" stroke="#F0EDE8" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+            <path d="M 8 32 C 24 16, 52 10, 78 18 C 94 24, 106 32, 124 27" stroke="#7A9178" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            <circle cx="124" cy="27" r="4" fill="#B06040"/>
+            <text x="8" y="44" font-family="Georgia, serif" font-size="18" font-weight="bold" fill="#F0EDE8">Flex</text>
+            <text x="43" y="44" font-family="Georgia, serif" font-size="18" font-style="italic" fill="#7A9178">ium</text>
+          </svg>
+          <h2 class="section-title" style="font-size: clamp(28px,3.5vw,44px); margin-bottom: 20px;">Entrenamiento de<br><em class="sage">flexibilidad psicológica</em><br>en tu bolsillo</h2>
+          <p style="color: rgba(240,237,232,0.65); font-size: 17px; line-height: 1.75; margin-bottom: 32px;">La app de Flexium te guía paso a paso por ejercicios basados en ACT — defusión cognitiva, aceptación, valores, acción comprometida. Sin costo, sin instalación, desde el navegador.</p>
+          <div style="display:flex; gap: 12px; flex-wrap: wrap;">
+            <a href="/app/" class="btn-primary" style="display:inline-flex; align-items:center; gap:8px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+              Abrir la app
+            </a>
+            <span style="color: var(--dim); font-size: 14px; align-self:center;">Funciona en cualquier dispositivo</span>
+          </div>
+        </div>
+        <div class="fade-up" style="transition-delay:0.1s;">
+          <div style="background: var(--bg2); border: 0.5px solid rgba(122,145,120,0.25); border-radius: 20px; padding: 28px; max-width: 340px; margin: 0 auto;">
+            <div style="display:flex; flex-direction:column; gap:12px;">
+              <div style="background: rgba(122,145,120,0.12); border: 0.5px solid rgba(122,145,120,0.25); border-radius: 12px; padding: 14px 16px; display:flex; align-items:center; gap:12px;">
+                <span style="font-size:22px;">🌿</span>
+                <div>
+                  <p style="font-size:13px; font-weight:500; margin-bottom:2px;">Defusión cognitiva</p>
+                  <span style="font-size:11px; color:var(--dim);">Separarte de tus pensamientos</span>
+                </div>
+              </div>
+              <div style="background: rgba(176,96,64,0.1); border: 0.5px solid rgba(176,96,64,0.2); border-radius: 12px; padding: 14px 16px; display:flex; align-items:center; gap:12px;">
+                <span style="font-size:22px;">🧭</span>
+                <div>
+                  <p style="font-size:13px; font-weight:500; margin-bottom:2px;">Valores</p>
+                  <span style="font-size:11px; color:var(--dim);">Clarificar lo que importa</span>
+                </div>
+              </div>
+              <div style="background: rgba(74,144,184,0.1); border: 0.5px solid rgba(74,144,184,0.2); border-radius: 12px; padding: 14px 16px; display:flex; align-items:center; gap:12px;">
+                <span style="font-size:22px;">🎯</span>
+                <div>
+                  <p style="font-size:13px; font-weight:500; margin-bottom:2px;">Acción comprometida</p>
+                  <span style="font-size:11px; color:var(--dim);">Moverse en la dirección elegida</span>
+                </div>
+              </div>
+              <a href="/app/" style="display:block; text-align:center; background: var(--sage); color: var(--bg); border-radius:10px; padding: 12px; font-size:14px; font-weight:500; margin-top:4px; transition: opacity 0.15s;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+                Empezar ahora →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
   <!-- ── INSCRIPCIÓN ────────────────────────────────────────────────── -->
   <section id="inscripcion">
     <div class="container">
@@ -941,12 +1005,12 @@
   <footer>
     <div class="footer-inner">
       <div class="footer-logo">
-        <svg width="120" height="38" viewBox="0 0 140 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="120" height="42" viewBox="0 0 140 50" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M 8 26 C 22 10, 48 4, 72 12 C 88 18, 98 26, 114 22" stroke="#F0EDE8" stroke-width="3.5" fill="none" stroke-linecap="round"/>
           <path d="M 8 32 C 24 16, 52 10, 78 18 C 94 24, 106 32, 124 27" stroke="#7A9178" stroke-width="1.5" fill="none" stroke-linecap="round"/>
           <circle cx="124" cy="27" r="4" fill="#B06040"/>
-          <text x="8" y="44" font-family="Georgia, serif" font-size="18" font-weight="bold" fill="#F0EDE8">Flex</text>
-          <text x="43" y="44" font-family="Georgia, serif" font-size="18" font-style="italic" fill="#7A9178">ium</text>
+          <text x="8" y="48" font-family="Georgia, serif" font-size="18" font-weight="bold" fill="#F0EDE8">Flex</text>
+          <text x="43" y="48" font-family="Georgia, serif" font-size="18" font-style="italic" fill="#7A9178">ium</text>
         </svg>
         <span class="footer-tagline">Elegir la dirección, no el destino</span>
       </div>
@@ -956,6 +1020,7 @@
         <a href="#taller">Talleres</a>
         <a href="#equipo">Equipo</a>
         <a href="#faq">FAQ</a>
+        <a href="/app/" style="color:var(--sage);">App →</a>
       </nav>
       <div style="display:flex;gap:16px;align-items:center;">
         <a href="https://www.instagram.com/flexium.psi/" target="_blank" style="color:var(--dim);transition:color 0.2s;" onmouseover="this.style.color='var(--white)'" onmouseout="this.style.color='var(--dim)'">
