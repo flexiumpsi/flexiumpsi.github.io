@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flexium Coaching — Con dudas y todo, hacia lo que te importa</title>
+<meta name="description" content="Programas breves de entrenamiento en flexibilidad psicológica, basados en ACT, para estudiantes y jóvenes profesionales. No es un tratamiento psicológico.">
+<meta property="og:title" content="Flexium Coaching">
+<meta property="og:description" content="Entrenamiento en flexibilidad psicológica basado en ACT para estudio, trabajo y decisiones.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNiIgZmlsbD0iIzBGMUMyRSIvPgogIDxwYXRoIGQ9Ik0gOCA1IEEgMTAgMTAgMCAwIDEgOCAyNyIgc3Ryb2tlPSIjRjBFREU4IiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBmaWxsPSJub25lIi8+CiAgPHBhdGggZD0iTSAxNCAzIEEgMTMgMTMgMCAwIDEgMTQgMjkiIHN0cm9rZT0iIzdBOTE3OCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIGZpbGw9Im5vbmUiLz4KICA8cGF0aCBkPSJNIDIwIDUgQSAxMCAxMCAwIDAgMCAyMCAyNyIgc3Ryb2tlPSIjQjA2MDQwIiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBmaWxsPSJub25lIi8+CiAgPGNpcmNsZSBjeD0iMTQiIGN5PSIxNiIgcj0iMyIgZmlsbD0iIzdBOTE3OCIvPgogIDxjaXJjbGUgY3g9IjE0IiBjeT0iMTYiIHI9IjEuNSIgZmlsbD0iIzBGMUMyRSIvPgo8L3N2Zz4=">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap">
+<style>
+:root{
+  --bg:#0F1C2E; --bg2:#14243A; --line:#24364E;
+  --white:#F0EDE8; --dim:#A9B6C4; --sage:#7A9178; --sage-l:#9DB29B; --terra:#B06040;
+  --serif:'Libre Baskerville', Georgia, serif;
+  --sans:'DM Sans', system-ui, sans-serif;
+  --max:1100px; --radius:6px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--white);font-family:var(--sans);font-weight:400;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--sage-l)}
+a:hover{color:var(--white)}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:16px;top:16px;background:var(--white);color:var(--bg);padding:8px 14px;border-radius:var(--radius);z-index:20}
+
+/* Navegación */
+header{position:sticky;top:0;z-index:10;background:rgba(15,28,46,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px;flex-wrap:wrap;padding:10px 0}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--white)}
+.brand-word{font-family:var(--serif);font-size:20px}
+.brand-word b{font-weight:700}
+.brand-word i{color:var(--sage-l)}
+.brand-tag{font-size:11px;letter-spacing:.28em;color:var(--sage-l);margin-left:6px}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;flex-wrap:wrap;align-items:center}
+nav a{color:var(--dim);text-decoration:none;font-size:15px}
+nav a:hover{color:var(--white)}
+.btn{display:inline-block;text-decoration:none;font-weight:500;border-radius:999px;padding:12px 24px;font-size:16px;line-height:1.2;transition:background .15s,color .15s}
+.btn-primary{background:var(--terra);color:#fff}
+.btn-primary:hover{background:#c26d4b;color:#fff}
+.btn-ghost{border:1px solid var(--sage);color:var(--white)}
+.btn-ghost:hover{background:var(--sage);color:var(--bg)}
+nav .btn{padding:9px 18px;font-size:14px;color:#fff}
+
+/* Secciones */
+section{padding:96px 0;border-bottom:1px solid var(--line)}
+.eyebrow{font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--sage-l);margin:0 0 16px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.2;margin:0}
+h2{font-size:clamp(28px,4vw,40px);margin-bottom:20px}
+h3{font-size:21px;margin-bottom:10px}
+.lead{font-size:clamp(18px,2.2vw,21px);color:var(--dim);max-width:640px;font-weight:300}
+.section-intro{max-width:680px;color:var(--dim);margin:0 0 48px}
+
+/* Hero */
+.hero{padding:120px 0 104px}
+.hero h1{font-size:clamp(38px,6.4vw,68px);max-width:820px;margin-bottom:28px}
+.hero h1 em{color:var(--sage-l)}
+.accent{width:64px;height:5px;border-radius:3px;background:var(--terra);margin-bottom:32px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px}
+.note{font-size:14px;color:var(--dim);margin-top:28px}
+
+/* Qué es / qué no es */
+.split{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.panel{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:32px}
+.panel ul{margin:0;padding-left:20px}
+.panel li{margin-bottom:8px}
+.panel.yes h3{color:var(--sage-l)}
+.panel.no h3{color:#D9A08A}
+
+/* Programas */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.card{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:32px;display:flex;flex-direction:column;gap:12px}
+.badge{align-self:flex-start;font-size:12px;letter-spacing:.12em;text-transform:uppercase;border-radius:999px;padding:5px 12px;border:1px solid var(--sage);color:var(--sage-l)}
+.badge.live{background:var(--terra);border-color:var(--terra);color:#fff}
+.card p{margin:0;color:var(--dim)}
+.meta{font-size:15px;color:var(--white);margin-top:auto;padding-top:12px;border-top:1px solid var(--line)}
+
+/* Cómo funciona */
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:16px}
+.steps li{display:grid;grid-template-columns:56px 1fr;gap:20px;align-items:start;background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px}
+.num{width:44px;height:44px;border-radius:50%;border:1px solid var(--sage);display:flex;align-items:center;justify-content:center;font-family:var(--serif);color:var(--sage-l)}
+.steps h3{font-size:19px;margin-bottom:4px}
+.steps p{margin:0;color:var(--dim)}
+.facts{display:flex;flex-wrap:wrap;gap:12px 32px;margin-top:32px;color:var(--dim);font-size:15px}
+.facts strong{color:var(--white);font-weight:500}
+
+/* Enfoque */
+.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;margin-top:40px}
+.pillar{border-top:2px solid var(--sage);padding-top:20px}
+.pillar p{margin:0;color:var(--dim)}
+
+/* Equipo */
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.person{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+.person p{margin:0;color:var(--dim)}
+.initials{width:56px;height:56px;border-radius:50%;background:var(--sage);color:var(--bg);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:20px;margin-bottom:16px}
+
+/* Preguntas */
+details{border-bottom:1px solid var(--line);padding:20px 0}
+summary{cursor:pointer;font-family:var(--serif);font-size:19px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--sage-l);font-family:var(--sans);font-size:24px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:var(--dim);margin:12px 0 0;max-width:760px}
+
+/* Inscripción */
+.signup{text-align:center}
+.signup .lead{margin:0 auto}
+.signup .cta-row{justify-content:center}
+
+/* Pie */
+footer{padding:56px 0 64px;color:var(--dim);font-size:14px}
+.foot{display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between}
+.foot p{margin:0 0 8px;max-width:520px}
+.emergency{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;max-width:420px}
+.emergency strong{color:var(--white)}
+
+:focus-visible{outline:2px solid var(--sage-l);outline-offset:3px}
+@media (max-width:640px){
+  section{padding:72px 0}
+  .hero{padding:88px 0 80px}
+  nav ul{gap:14px}
+  nav li:not(:last-child){display:none}
+  .nav{flex-wrap:nowrap}
+  .brand-tag{display:none}
+  .steps li{grid-template-columns:1fr;gap:12px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#" aria-label="Flexium Coaching, inicio">
+      <svg width="64" height="19" viewBox="0 0 136 40" fill="none" aria-hidden="true">
+        <path d="M 4 24 C 18 8, 44 2, 68 10 C 84 16, 94 24, 110 20" stroke="#F0EDE8" stroke-width="3.5" stroke-linecap="round"/>
+        <path d="M 4 30 C 20 14, 48 8, 74 16 C 90 22, 102 30, 120 25" stroke="#7A9178" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="120" cy="25" r="4" fill="#B06040"/>
+      </svg>
+      <span class="brand-word"><b>Flex</b><i>ium</i><span class="brand-tag">COACHING</span></span>
+    </a>
+    <nav aria-label="Secciones">
+      <ul>
+        <li><a href="#programas">Programas</a></li>
+        <li><a href="#como-funciona">Cómo funciona</a></li>
+        <li><a href="#equipo">Equipo</a></li>
+        <li><a href="#preguntas">Preguntas</a></li>
+        <li><a class="btn btn-primary" href="#sumarme">Quiero sumarme</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Flexium Coaching</p>
+      <div class="accent" aria-hidden="true"></div>
+      <h1>Con dudas y todo, hacia <em>lo que te importa.</em></h1>
+      <p class="lead">Programas breves de entrenamiento en flexibilidad psicológica, basados en ACT, para estudiantes y jóvenes profesionales que tienen una meta concreta y sienten que algo los frena.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#sumarme">Sumarme a la lista</a>
+        <a class="btn btn-ghost" href="#programas">Ver programas</a>
+      </div>
+      <p class="note">Flexium Coaching no es un tratamiento psicológico.</p>
+    </div>
+  </section>
+
+  <section id="que-es">
+    <div class="wrap">
+      <p class="eyebrow">El servicio</p>
+      <h2>Trabajamos sobre tu meta, no sobre el malestar.</h2>
+      <p class="section-intro">Postergar, bloquearse frente a un examen o no poder decidir no es falta de voluntad. Es una forma de alejarse de lo incómodo, y se puede entrenar otra respuesta.</p>
+      <div class="split">
+        <div class="panel yes">
+          <h3>Lo que hacemos</h3>
+          <ul>
+            <li>Objetivos académicos, laborales y personales</li>
+            <li>Hábitos, organización y postergación</li>
+            <li>Claridad sobre lo que te importa y cómo decidir</li>
+            <li>Herramientas para avanzar aunque aparezcan dudas</li>
+            <li>Seguimiento con un plan y metas medibles</li>
+          </ul>
+        </div>
+        <div class="panel no">
+          <h3>Lo que no hacemos</h3>
+          <ul>
+            <li>Terapia, evaluación ni diagnóstico</li>
+            <li>Acompañamiento en crisis o situaciones de riesgo</li>
+            <li>Trabajo sobre trauma o problemas clínicos</li>
+            <li>Indicaciones sobre medicación</li>
+          </ul>
+          <p style="color:var(--dim);margin:16px 0 0;font-size:15px">Si necesitás algo de esto, te recomendamos consultar con un profesional de la salud mental, y podemos ayudarte a encontrar uno.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="programas">
+    <div class="wrap">
+      <p class="eyebrow">Programas</p>
+      <h2>Breves, estructurados y con una meta clara.</h2>
+      <p class="section-intro">Cada programa tiene una cantidad fija de encuentros y un objetivo definido desde el primer día.</p>
+      <div class="cards">
+        <article class="card">
+          <span class="badge live">Primera edición en 2027</span>
+          <h3>Rendir sin bloquearse</h3>
+          <p>Para estudiantes universitarios con un examen o una entrega en las próximas semanas. Un plan de estudio concreto y herramientas para sostenerlo.</p>
+          <p class="meta">Grupal · 5 encuentros virtuales · Primera edición gratuita</p>
+        </article>
+        <article class="card">
+          <span class="badge">Próximamente</span>
+          <h3>Decidir con claridad</h3>
+          <p>Para jóvenes profesionales en una transición laboral o vocacional que quieren decidir según lo que les importa.</p>
+          <p class="meta">Grupal · 5 encuentros virtuales</p>
+        </article>
+        <article class="card">
+          <span class="badge">Próximamente</span>
+          <h3>Acompañamiento individual por objetivos</h3>
+          <p>Un ciclo personalizado para trabajar una meta propia, con un contrato de objetivos y seguimiento en cada encuentro.</p>
+          <p class="meta">Individual · Ciclos de 4 encuentros</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="como-funciona">
+    <div class="wrap">
+      <p class="eyebrow">Cómo funciona</p>
+      <h2>Rendir sin bloquearse, encuentro por encuentro.</h2>
+      <p class="section-intro">Cada encuentro trabaja una herramienta distinta, siempre aplicada a la misma meta: llegar al examen habiendo estudiado lo que planificaste.</p>
+      <ol class="steps">
+        <li><span class="num">1</span><div><h3>Meta y dirección</h3><p>Definimos tu meta concreta y para qué te importa.</p></div></li>
+        <li><span class="num">2</span><div><h3>Mapa de la meta</h3><p>Vemos qué te acerca y qué te aleja de estudiar, y armamos un plan semanal.</p></div></li>
+        <li><span class="num">3</span><div><h3>Pensamientos que frenan</h3><p>Practicamos tomar distancia de pensamientos como “no me va a dar el tiempo”.</p></div></li>
+        <li><span class="num">4</span><div><h3>Atención y esfuerzo</h3><p>Entrenamos sostener la atención en la tarea aunque aparezcan el aburrimiento o la frustración.</p></div></li>
+        <li><span class="num">5</span><div><h3>Plan hasta el examen</h3><p>Cerramos con un plan final y qué hacer si volvés a postergar.</p></div></li>
+      </ol>
+      <div class="facts">
+        <span><strong>90 minutos</strong> por encuentro</span>
+        <span><strong>Virtual</strong>, desde Argentina</span>
+        <span><strong>6 a 10</strong> participantes por grupo</span>
+        <span><strong>Práctica breve</strong> entre encuentros</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="enfoque">
+    <div class="wrap">
+      <p class="eyebrow">Nuestro enfoque</p>
+      <h2>Entrenamiento basado en ACT.</h2>
+      <p class="section-intro">Usamos ACT (entrenamiento en aceptación y compromiso), un modelo de la ciencia conductual contextual con investigación en educación, deporte y organizaciones. No buscamos que las dudas desaparezcan, sino que puedas avanzar con ellas.</p>
+      <div class="pillars">
+        <div class="pillar"><h3>Lo que te importa</h3><p>Tu meta y tus valores marcan la dirección del trabajo.</p></div>
+        <div class="pillar"><h3>Distancia de lo que frena</h3><p>Herramientas para que un pensamiento no decida por vos.</p></div>
+        <div class="pillar"><h3>Acción, paso a paso</h3><p>Planes concretos, con seguimiento y metas medibles.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="equipo">
+    <div class="wrap">
+      <p class="eyebrow">Equipo</p>
+      <h2>Quiénes facilitan los programas.</h2>
+      <p class="section-intro">Somos estudiantes avanzados de Psicología formados en ciencia conductual contextual y ACT. Trabajamos con supervisión profesional externa.</p>
+      <div class="team">
+        <div class="person">
+          <div class="initials" aria-hidden="true">BT</div>
+          <h3>Benjamín Tugender</h3>
+          <p>Estudiante avanzado de la Licenciatura en Psicología y cofundador de Flexium.</p>
+        </div>
+        <div class="person">
+          <div class="initials" aria-hidden="true">JP</div>
+          <h3>Juan Cruz Palacios</h3>
+          <p>Estudiante avanzado de la Licenciatura en Psicología.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="preguntas">
+    <div class="wrap">
+      <p class="eyebrow">Preguntas frecuentes</p>
+      <h2>Lo que más nos preguntan.</h2>
+      <details>
+        <summary>¿Es terapia?</summary>
+        <p>No. Flexium Coaching es un entrenamiento orientado a metas concretas. No incluye evaluación, diagnóstico ni tratamiento. Si estás atravesando un momento difícil, te recomendamos consultar con un profesional de la salud mental.</p>
+      </details>
+      <details>
+        <summary>¿Cuánto cuesta?</summary>
+        <p>La primera edición de Rendir sin bloquearse es gratuita. Los valores de las próximas ediciones se publican antes de abrir cada inscripción.</p>
+      </details>
+      <details>
+        <summary>¿Necesito saber algo de ACT o de psicología?</summary>
+        <p>No. Todo lo que usamos se explica en los encuentros, con ejemplos aplicados al estudio y al trabajo.</p>
+      </details>
+      <details>
+        <summary>¿Cómo es la inscripción?</summary>
+        <p>Completás un formulario breve con unas preguntas para ver si el programa es lo que estás buscando. Al ser virtual, también te pedimos un contacto de emergencia.</p>
+      </details>
+      <details>
+        <summary>¿Qué pasa si durante el programa necesito otra cosa?</summary>
+        <p>Te lo decimos con claridad y te ayudamos a encontrar un profesional adecuado. Siempre te ofrecemos opciones y la elección es tuya.</p>
+      </details>
+    </div>
+  </section>
+
+  <section id="sumarme" class="signup">
+    <div class="wrap">
+      <p class="eyebrow">Inscripción</p>
+      <h2>Sumate a la lista de interesados.</h2>
+      <p class="lead">Escribinos y te avisamos cuando abra la inscripción a la primera edición de Rendir sin bloquearse.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="mailto:coachingflexium@gmail.com?subject=Quiero%20sumarme%20a%20Rendir%20sin%20bloquearse">Escribinos por mail</a>
+        <a class="btn btn-ghost" href="https://www.instagram.com/coachingflexium/" rel="noopener">Seguinos en Instagram</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <p><strong style="color:var(--white)">Flexium Coaching</strong> es un servicio de <a href="/">Flexium</a>.</p>
+      <p>Flexium Coaching no es un tratamiento psicológico. Los facilitadores son estudiantes avanzados de Psicología y trabajan con supervisión profesional externa.</p>
+      <p><a href="mailto:coachingflexium@gmail.com">coachingflexium@gmail.com</a> · <a href="https://www.instagram.com/coachingflexium/" rel="noopener">@coachingflexium</a></p>
+    </div>
+    <div class="emergency">
+      <p><strong>Si estás en una emergencia</strong>, llamá al <strong>911</strong>.</p>
+      <p style="margin:0">Línea de prevención del suicidio: <strong>135</strong> (gratuita desde CABA y GBA) o (011) 5275-1135 desde todo el país.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
